@@ -1,6 +1,5 @@
 SELECT DISTINCT courses.name
-FROM courses, enrolled, students, majorsIn, departments
+FROM courses, enrolled, students, majors_in, departments
 WHERE courses.crn = enrolled.courses_crn and students.id = enrolled.students_id 
-and students.id = majorsIn.students_id and majorsIn.departments_id = departments.id 
+and students.id = majors_in.students_id and majors_in.departments_id = departments.id 
 and departments.name = "BIF"
- 
